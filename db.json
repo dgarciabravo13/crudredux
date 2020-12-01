@@ -49,6 +49,11 @@
       "nombre": "Zumo de Manzana",
       "precio": 100,
       "id": 10
+    },
+    {
+      "nombre": "Tequila",
+      "precio": 100,
+      "id": 11
     }
   ]
 }
