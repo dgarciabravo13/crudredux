@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Producto from '../Producto'
+import Producto from "../Producto";
 
 //Reduxs
 import { useSelector, useDispatch } from "react-redux";
@@ -16,11 +16,18 @@ const Productos = () => {
     cargarProductos();
   }, []);
 
-  const productos = useSelector(state => state.productos.productos)
-  console.log(productos);
+  const productos = useSelector((state) => state.productos.productos);
+  const error = useSelector((state) => state.productos.error);
+  const cargando = useSelector( state => state.productos.loading);
   return (
     <>
       <h2 className="text-center my-5">Listado de Productos</h2>
+      {error ? (
+        <p className="font-weight-bold alert alert-danger text-center mt-4">
+          Hubo un error
+        </p>
+      ) : null}
+      {cargando ? <p className="text-center">Cargando...</p>: null}
       <table className="table table-striped">
         <thead className="bg-primary table-dark">
           <tr>
@@ -30,9 +37,11 @@ const Productos = () => {
           </tr>
         </thead>
         <tbody>
-          {productos.length === 0 ? 'No hay productos': (
-            productos.map(producto => <Producto key={producto.id} producto={producto}/>)
-          )}
+          {productos.length === 0
+            ? "No hay productos"
+            : productos.map((producto) => (
+                <Producto key={producto.id} producto={producto} />
+              ))}
         </tbody>
       </table>
     </>
