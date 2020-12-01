@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 //Redux
 import { useDispatch } from "react-redux";
@@ -13,9 +14,22 @@ const Producto = ({ producto }) => {
   //Confirmar si se desea eliminarlo
   const confirmarEliminarProducto = (id) => {
     //Preguntar al usuario
-
-    //Pasarlo al action
-    dispatch(borrarProductoAction(id));
+    Swal.fire({
+      title: "Estás seguro?",
+      text: "Este producto no prodrá ser recuperado!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, Confirmar",
+      cancelButtonText: "Cancelar"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        //Pasarlo al action
+        dispatch(borrarProductoAction(id));
+        
+      }
+    });
   };
   return (
     <tr>

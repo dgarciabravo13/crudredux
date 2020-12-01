@@ -1,21 +1,6 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombre": "Jugo de Zanahoria",
-      "precio": "31111"
-    },
-    {
-      "id": 2,
-      "nombre": "Jugo de Naranja",
-      "precio": "1"
-    },
-    {
-      "nombre": "Jugo de Naranja",
-      "precio": "300",
-      "id": 3
-    },
-    {
       "nombre": "Rib Eye 800g",
       "precio": "200",
       "id": 4
@@ -27,18 +12,8 @@
     },
     {
       "nombre": "Tequila",
-      "precio": 100,
-      "id": 6
-    },
-    {
-      "nombre": "Tequila",
       "precio": 3000,
       "id": 7
-    },
-    {
-      "nombre": "David",
-      "precio": 1,
-      "id": 8
     },
     {
       "nombre": "Zumo de Piña",
