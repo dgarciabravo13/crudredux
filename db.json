@@ -24,6 +24,31 @@
       "nombre": "Jugo de Fresa",
       "precio": "200",
       "id": 5
+    },
+    {
+      "nombre": "Tequila",
+      "precio": 100,
+      "id": 6
+    },
+    {
+      "nombre": "Tequila",
+      "precio": 3000,
+      "id": 7
+    },
+    {
+      "nombre": "David",
+      "precio": 1,
+      "id": 8
+    },
+    {
+      "nombre": "Zumo de Piña",
+      "precio": 100,
+      "id": 9
+    },
+    {
+      "nombre": "Zumo de Manzana",
+      "precio": 100,
+      "id": 10
     }
   ]
 }
